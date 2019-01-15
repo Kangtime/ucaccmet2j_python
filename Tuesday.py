@@ -21,7 +21,9 @@ for line in Seattle:
     Seattle_month[months-1] = line['value'] + Seattle_month[months-1]
 print(Seattle_month)
 
-
+with open('Seattle.json', 'w') as file:
+    json.dump(Seattle_month, file, indent=4, sort_keys=True)
+print(Seattle_month)
 #print(Seattle)
 
 
